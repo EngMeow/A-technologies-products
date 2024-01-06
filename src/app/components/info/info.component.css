@@ -1,0 +1,9 @@
+.mapChart{
+    height: 65px;
+}
+
+.card-body,.card{
+    margin: 0;
+    padding: 0;
+    height: 82px;
+}

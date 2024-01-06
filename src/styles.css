@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'ArabicFont';
+    src: url('./assets/fonts/Almarai/Almarai-Regular.ttf') format('woff');
+    /* Add other font formats if necessary */
+  }
+
+body {
+    font-family: 'ArabicFont' , sans-serif;
+    font-weight: 400;
+    background-color:#F3F5F7;
+}

@@ -1,0 +1,94 @@
+<div class="col w-100">
+    <div class="d-flex ms-auto align-items-center">
+      <div class="d-flex justify-content-between align-items-center bg-white rounded-2 border border-2">
+        <div class="col-md-5 w-100 rounded bg-white ">
+          <i class="bi bi-search" for="searchBar"></i>
+          <input type="text" name="searchBar" id="searchBar" placeholder="بحث عن ..." class="p-1 mx-3 border-0" style="font-size: 10px; width: 316px; height: 30px;">
+        </div>
+        <div class="bg-white mx-2 p-2 rounded-2 border border-2">
+          <i class="bi bi-funnel"></i>
+        </div>
+      </div>
+    </div>
+  
+    <div class="d-flex justify-content-between align-items-center w-100 mt-2 ">
+      <div class="bg-white d-flex justify-content-center rounded-2 border border-2">
+        <div class="btn btn d-flex align-items-cente316pxr justify-content-around border-bottom border border-2 border-primary">
+           <span class="text-primary " style="font-size: 12px;">المنتجات</span>
+        <span class="bg-primary rounded-2 mx-2 p-1 text-white" style="font-size: 8px;">120</span>
+        </div>
+  
+        <div class=" d-flex justify-content-center align-items-center">
+          <div>
+            <span class="text-dark mx-2" style="font-size: 12px;">الخدمات</span>
+  
+          </div>
+          <span class="bg-secondary bg-opacity-25 rounded-2 mx-2 p-1 text-dark" style="font-size: 8px;">70</span>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between p-1">
+        <div class="bg-white mx-2 bg-light d-flex justify-content-center align-items-center rounded-2 border border-2 p-3 " style="width: 60px; height: 30px;">
+          <i class="bi bi-list text-dark fs-5 p-1"></i>
+          <i class="bi bi-ui-checks-grid fs-5 p-1"></i>
+        </div>
+  
+        <div class="me-2 bg-primary d-flex justify-content-center align-items-center rounded-2" style=" height: 30px; width: 120px;">
+          <i class="text-white bi bi-box-seam p-2 fs-6 mx-1"></i>
+          <span class="text-white p-2 text-dark mx-1" style="font-size: 12px;">إضافة جديد</span>
+        </div>
+      </div>
+    </div>
+  
+    <div class="rounded-2 p-3 bg-white">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">المنتجات</th>
+            <th scope="col">سعر البيع</th>
+            <th scope="col">الكمية</th>
+            <th scope="col">حالة المنتج</th>
+            <th scope="col">التصنيف</th>
+            <th scope="col">الضريبة %</th>
+            <th scope="col">الحد الأدني</th>
+            <th scope="col">الخصم</th>
+            <th scope="col">معدل البيع</th>
+            <th scope="col">
+                <i class="bg-white px-1 rounded-1 bi bi-pencil-square fs-6 "></i>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td >
+              <div class="row">
+                <div class="col-md-1 ms-2 d-flex align-items-center">
+                  <img src="../../../assets/img/table1.svg" alt="" class="rounded-2" style="width: 30px; height: 30px;">
+                </div>
+                <div class="col m-0" style="font-size: 10px;">
+                  {{product.productName}}
+                  <h6 class="text-secondary" style="font-size: 9px;">126565958987</h6>      
+                </div>
+              </div>
+            </td>
+            <td>{{product.price | currency}}</td>
+            <td>{{product.quantity}} قطعة</td>
+            <td>{{product.productStatus}}</td>
+            <td>{{product.Ranking}}</td>
+            <td>{{product.tax}} %</td>
+            <td>{{product.minNumber}} قطعة</td>
+            <td>{{product.discount | currency}}</td>
+            <td>{{product.SellingRate}}</td>
+            <td>
+              <i class="mx-1 text-info bi bi-pencil-square"></i>
+              <i class="mx-1 text-warning bi bi-eye-fill"></i>
+              <i class="bi bi-list"></i>
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

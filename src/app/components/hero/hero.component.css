@@ -1,0 +1,78 @@
+.service{
+    width: 100%;
+    height: 116px; /* Adjust the height as needed */
+    background: linear-gradient(to right, #feed0033, #ffffff);
+    
+  }
+  
+.myCard{
+    height: 116px;
+  }
+  
+  .upload-label {
+      display: inline-block;
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .cardX{
+      height: 82px;
+    }
+  
+    
+    .image-container {
+      text-align: center;
+    }
+    
+    .ImgBox{
+      width: 268px;
+      height: 110px;
+    }
+    .image-container img { 
+      position: absolute;
+      width: auto;
+      max-width: 100%;
+      margin-bottom: 10px;
+      
+    }
+
+    .font{
+        
+.myCard{
+    height: 116px;
+  }
+  
+  .upload-label {
+      display: inline-block;
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .cardX{
+      height: 82px;
+    }
+  
+
+    
+    .ImgBox{
+      width: 400px;
+      height: 100%;
+      margin-bottom: 0px;
+      
+    }
+    .image-container img { 
+      position: absolute;
+      width: auto;
+      overflow: hidden;
+    }
+
+    .img{
+      object-fit: cover;
+    }
+    }

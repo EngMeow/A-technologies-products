@@ -1,0 +1,63 @@
+{
+    "dir":"rtl",
+
+    "Products & Services": "المنتجات والخدمات",
+    "There is a long-established fact that readable content...": "هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء...",
+    "Store product statistics": "إحصائيات منتجات المتجر",
+    "Expected profit": "الأرباح المتوقعة",
+    "English":"عربي",
+    
+    "Best selling products": "المنتجات الأكثر مبيعا",
+    "Iphone Pro": "أيفون برو ماكس",
+    "Leather handbag":"حقيبة جلد",
+    "Rolex watch":"ساعة رولكس",
+
+    "Lowest selling products": "المنتجات الاقل مبيعا",
+    "travel bag": "شنطة سفر",
+    "Cosmetics":"مستحضرات التجميل",
+    "Sumsung A20":"سامسونج A20",
+  
+    "Resource available to": "المورد متاح لـ",
+    "select duration": "اختر المدة",
+    "day": "يوم",
+    "month": "شهر",
+    "year": "سنة",
+  
+    "Resource time": "وقت المورد",
+    "Service time": "وقت الخدمة",
+    "Fixed time": "وقت ثابت",
+  
+    "Multi-booking": "الحجز المتعدد",
+    "Book for one person": "احجز لشخص واحد",
+    "Book for multi-persons": "احجز لعدة أشخاص",
+  
+    "Choose working time for resources": "اختر وقت العمل للموارد",
+    "Your weekly picks are here. You just have to do the strips and there is no time required to set up the work.": "اختياراتك الأسبوعية هنا. عليك فقط إجراء التعديلات ولا يلزم وقت لإعداد العمل.",
+  
+    "Advanced Settings": "إعدادات متقدمة",
+    "Normal Settings": "إعدادات عادية",
+  
+    "Saturday": "السبت",
+    "Sunday": "الأحد",
+    "Monday": "الاثنين",
+    "Tuesday": "الثلاثاء",
+    "Wednesday": "الأربعاء",
+    "Thursday": "الخميس",
+    "Friday": "الجمعة",
+  
+    "Start Date": "تاريخ البداية",
+    "End Date": "تاريخ الانتهاء",
+  
+    "choose time": "اختر الوقت",
+  
+    "Add Action": "إضافة إجراء",
+    "Remove Action": "إزالة الإجراء",
+    "Files": "ملفات",
+
+    "minute":"دقيقة",
+    "minutes":"دقيقة",
+    "appointments":"موعد"
+
+
+  }
+  
