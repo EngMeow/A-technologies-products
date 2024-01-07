@@ -150,6 +150,7 @@ td {
     }
     .ngx-pagination .pagination-previous.disabled::hover{
         background-color: #2199e8
+    }
     .ngx-pagination .pagination-previous a:before,
     .ngx-pagination .pagination-previous.disabled:before a:before,
     .ngx-pagination li.pagination-next::before{
@@ -187,12 +188,11 @@ td {
     .ngx-pagination a:hover , .ngx-pagination button:hover {
         background: initial !important;
     }
-;
-    }
+
+    
 
     .ngx-pagination a:hover , .ngx-pagination button:hover {
         background: initial !important;
     }
 
-}
-
+  }
