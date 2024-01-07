@@ -37,7 +37,7 @@ export class ProductsComponent {
     }
    }
 
-   itemsPerPage:number = 4 ;
+   itemsPerPage:number = 6 ;
    p: number = 1;
    totalProduct:any 
 }

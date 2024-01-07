@@ -12,7 +12,7 @@
     </div>
   
     <div class="d-flex justify-content-between align-items-center w-100 mt-2 ">
-      <div class="bg-white d-flex justify-content-around rounded-2 align-items-center rounded-bottom-0 border border-1" style="width: 250px; height: 40px;">
+      <div class="bg-white d-flex justify-content-around rounded-2 align-items-center rounded-bottom-0 border border-1 " style="width: 250px; height: 40px;">
         <div class="ServiceBtn btn d-flex align-items-center justify-content-around rounded-0">
            <span  style="font-size: 12px;">المنتجات</span>
         <span class="Action rounded-2 mx-2 p-1 text-white" style="font-size: 8px;">120</span>
@@ -79,7 +79,7 @@
             <td>
               <div [ngStyle]="{'background-color': getBackgroundColor(product.productStatus)}"
               [ngClass]="getFontColor(product.productStatus)"
-              class="p-1 rounded-3 bg-opacity-25">
+              class="p-1 rounded-3 bg-opacity-25 mx-2">
                 <ng-container *ngIf="product.productStatus == ProductStatus.Available">
                   <img src="../../../assets/img/tick-square.svg" alt="">
                 </ng-container>
@@ -123,7 +123,7 @@
               <img src="../../../assets/img/eye.svg" class="mx-1 p-1 border border-1 rounded-2" alt="">
               <img src="../../../assets/img/edit.svg" class="mx-1 p-1 border border-1 rounded-2" alt="">
               <div class="btn-group">
-                <button type="button" class="btn p-1 border-0 bg-none m-0" data-bs-toggle="dropdown" aria-expanded="false">
+                <button type="button" class="btn px-1 border-0 bg-none m-0" data-bs-toggle="dropdown" aria-expanded="false">
                   <img src="../../../assets/img/Vector.svg" >
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end listBtn">
@@ -146,8 +146,18 @@
           
         </tbody>
       </table>
-      <div class="text-center m-0 ">
-        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      <div class="text-center ">
+        <pagination-controls class="my-pagination" (pageChange)="p = $event"
+                      maxSize="9"
+                      directionLinks="true"
+                      autoHide="true"
+                      responsive="true"
+                      previousLabel=""
+                      nextLabel=""
+                      screenReaderPaginationLabel="Pagination"
+                      screenReaderPageLabel="page"
+                      screenReaderCurrentLabel="You're on page">
+        ></pagination-controls>
       </div>
     </div>
   </div>
