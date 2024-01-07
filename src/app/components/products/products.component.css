@@ -1,7 +1,21 @@
+
 th {
     font-size: 11px;
+    color: #85848B;
+    background-color: #F8F8F9;
+    font-weight: 400;
+    margin: 10px;
 }
 
 tr { 
     font-size: 12px;
+}
+
+th , td { 
+    text-align: center;
+    vertical-align: middle;
+}
+
+td {
+    height: 44px;
 }

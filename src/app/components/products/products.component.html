@@ -1,23 +1,23 @@
-<div class="col w-100">
+<div class="col mt-2">
     <div class="d-flex ms-auto align-items-center">
-      <div class="d-flex justify-content-between align-items-center bg-white rounded-2 border border-2">
-        <div class="col-md-5 w-100 rounded bg-white ">
-          <i class="bi bi-search" for="searchBar"></i>
-          <input type="text" name="searchBar" id="searchBar" placeholder="بحث عن ..." class="p-1 mx-3 border-0" style="font-size: 10px; width: 316px; height: 30px;">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="rounded-2 bg-white d-flex border border-2" style="width: 316px;">
+          <img src="../../../assets/img/search-normal.svg" class="mx-2" alt="">
+          <input type="text" name="searchBar" id="searchBar" placeholder="بحث عن ..." class="p-1 mx-3 border-0 col-md-10" style="font-size: 10px; height: 30px;">
         </div>
-        <div class="bg-white mx-2 p-2 rounded-2 border border-2">
-          <i class="bi bi-funnel"></i>
+        <div class="bg-white mx-2 px-1 rounded-2 border border-2" style="height: 30px;">
+          <img src="../../../assets/img/filter.svg" alt="">
         </div>
       </div>
     </div>
   
     <div class="d-flex justify-content-between align-items-center w-100 mt-2 ">
-      <div class="bg-white d-flex justify-content-center rounded-2 border border-2">
-        <div class="btn btn d-flex align-items-cente316pxr justify-content-around border-bottom border border-2 border-primary">
+      <div class="bg-white d-flex justify-content-around rounded-2 align-items-center border border-bottom-0  rounded-bottom-0 " style="width: 250px; height: 40px;">
+        <div class="btn btn d-flex align-items-center justify-content-around border-bottom rounded-0 ">
            <span class="text-primary " style="font-size: 12px;">المنتجات</span>
         <span class="bg-primary rounded-2 mx-2 p-1 text-white" style="font-size: 8px;">120</span>
         </div>
-  
+        <div style="width: 1px; height: 19px;" class="bg-secondary bg-opacity-25 ms-2"></div>
         <div class=" d-flex justify-content-center align-items-center">
           <div>
             <span class="text-dark mx-2" style="font-size: 12px;">الخدمات</span>
@@ -27,22 +27,23 @@
         </div>
       </div>
       <div class="d-flex justify-content-between p-1">
-        <div class="bg-white mx-2 bg-light d-flex justify-content-center align-items-center rounded-2 border border-2 p-3 " style="width: 60px; height: 30px;">
-          <i class="bi bi-list text-dark fs-5 p-1"></i>
-          <i class="bi bi-ui-checks-grid fs-5 p-1"></i>
+        <div class="bg-white mx-2 bg-light d-flex justify-content-center align-items-center rounded-2 border border-2 " style="width: 60px; height: 30px;">
+          <img src="../../../assets/img/menu.svg" class="ms-2" alt="">
+          <div style="width: 1px; height: 19px;" class="bg-secondary bg-opacity-25 ms-2"></div>
+          <img src="../../../assets/img/element-3.svg" alt="">
         </div>
   
         <div class="me-2 bg-primary d-flex justify-content-center align-items-center rounded-2" style=" height: 30px; width: 120px;">
-          <i class="text-white bi bi-box-seam p-2 fs-6 mx-1"></i>
-          <span class="text-white p-2 text-dark mx-1" style="font-size: 12px;">إضافة جديد</span>
+          <img src="../../../assets/img/box-add.svg" alt="">
+          <span class="text-white px-2 text-dark mx-1" style="font-size: 12px;">إضافة جديد</span>
         </div>
       </div>
     </div>
   
-    <div class="rounded-2 p-3 bg-white">
+    <div class="rounded-2 p-3 bg-white border border-2">
       <table class="table">
-        <thead>
-          <tr>
+        <thead class="custom-thead">
+          <tr class="text-center m-2 border border-2">
             <th scope="col">#</th>
             <th scope="col">المنتجات</th>
             <th scope="col">سعر البيع</th>
@@ -53,37 +54,92 @@
             <th scope="col">الحد الأدني</th>
             <th scope="col">الخصم</th>
             <th scope="col">معدل البيع</th>
-            <th scope="col">
-                <i class="bg-white px-1 rounded-1 bi bi-pencil-square fs-6 "></i>
+            <th scope="col" >
+                <img src="../../../assets/img/grid-edit.svg" alt="" class="p-1 border border-2 rounded-3 ">
             </th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let product of products">
+          <tr *ngFor="let product of products" class="text-center border border-2">
             <td>{{product.id}}</td>
             <td >
               <div class="row">
                 <div class="col-md-1 ms-2 d-flex align-items-center">
-                  <img src="../../../assets/img/table1.svg" alt="" class="rounded-2" style="width: 30px; height: 30px;">
+                  <img src="../../../assets/img/table{{product.id}}.svg" alt="" class="rounded-2">
                 </div>
                 <div class="col m-0" style="font-size: 10px;">
                   {{product.productName}}
-                  <h6 class="text-secondary" style="font-size: 9px;">126565958987</h6>      
+                  <h6 class="text-secondary mt-2" style="font-size: 9px;">126565958987</h6>      
                 </div>
               </div>
             </td>
             <td>{{product.price | currency}}</td>
             <td>{{product.quantity}} قطعة</td>
-            <td>{{product.productStatus}}</td>
-            <td>{{product.Ranking}}</td>
+            <td>
+              <div [ngStyle]="{'background-color': getBackgroundColor(product.productStatus)}"
+              [ngClass]="getFontColor(product.productStatus)"
+              class="p-1 rounded-3 bg-opacity-25">
+                <ng-container *ngIf="product.productStatus == ProductStatus.Available">
+                  <img src="../../../assets/img/tick-square.svg" alt="">
+                </ng-container>
+                <ng-container *ngIf="product.productStatus == ProductStatus.Unavailable">
+                  <img src="../../../assets/img/info-circle.svg" alt="">
+                </ng-container>
+                <ng-container *ngIf="product.productStatus == ProductStatus.AlmostFinish">
+                  <img src="../../../assets/img/arrow-up.svg" alt="">
+                </ng-container>
+                {{product.productStatus}}
+              </div>
+            </td>
+            <td>
+              <div class="bg-secondary bg-opacity-10 rounded-4 py-1 " >
+                <ng-container *ngIf="product.Ranking == 'قص الشعر'">
+                  <img src="../../../assets/img/scissors.svg" alt="">
+                </ng-container>
+                <ng-container *ngIf="product.Ranking == 'جهاز لابتوب'">
+                  <img src="../../../assets/img/monitor.svg" alt="">
+                </ng-container>
+                <ng-container *ngIf="product.Ranking == 'جهاز موبيل'">
+                  <img src="../../../assets/img/mobile.svg" alt="">
+                </ng-container>
+                {{product.Ranking}}
+              </div>
+            </td>
             <td>{{product.tax}} %</td>
             <td>{{product.minNumber}} قطعة</td>
             <td>{{product.discount | currency}}</td>
-            <td>{{product.SellingRate}}</td>
             <td>
-              <i class="mx-1 text-info bi bi-pencil-square"></i>
-              <i class="mx-1 text-warning bi bi-eye-fill"></i>
-              <i class="bi bi-list"></i>
+              <div>
+                <ng-container *ngIf="product.SellingRate">
+                  <img src="../../../assets/img/Mask group up.svg" alt="">
+                </ng-container>
+                  <ng-container *ngIf="!product.SellingRate">
+                  <img src="../../../assets/img/Mask group down.svg" alt="">
+                </ng-container>
+              </div>
+            </td>
+            <td>
+              <img src="../../../assets/img/eye.svg" class="mx-1 p-1 border border-1 rounded-2" alt="">
+              <img src="../../../assets/img/edit.svg" class="mx-1 p-1 border border-1 rounded-2" alt="">
+              <div class="btn-group">
+                <button type="button" class="btn" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="../../../assets/img/Vector.svg" alt="">
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end text-center p-2">
+                  <li>
+                    <img src="../../../assets/img/add-circle.svg" class="mx-1" alt="">
+                    <span style="font-size: 12px;">إضافة طلب شراء</span>
+                  </li>
+                  <li>
+                    <img src="../../../assets/img/pause-circle.svg" class="mx-1" alt="">
+                    <span style="font-size: 12px;" class="text-secondary">تعطيل المنتج</span>
+                  </li>
+                  <li>
+                    <img src="../../../assets/img/trash.svg" class="mx-1" alt="">
+                    <span style="font-size: 12px;" class="text-danger">حذف المنتج</span>
+                  </li>
+                </ul>
+              </div>
             </td>
             
           </tr>
@@ -91,4 +147,3 @@
       </table>
     </div>
   </div>
-  
