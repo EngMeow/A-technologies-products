@@ -1,3 +1,51 @@
+.ServiceBtn {
+color: #898995;
+.Action{
+  background-color: #85848B;
+}
+}
+
+
+.ServiceBtn:hover, .ServiceBtn:active {
+  color:#0771DE;
+  border-bottom: 2px solid #0771DE;
+  .Action{
+    background-color: #0771DE;
+  }
+}
+
+.ChooseBtn{
+  color: #85848B;
+}
+
+.ChooseBtn:hover{
+  color:#0771DE;
+  background-color: white;
+  
+}
+
+.listBtn li{
+  text-align: right;
+  margin: 8px;
+
+}
+
+.listBtn li:hover{
+  background-color: #0773de31;
+  border-radius: 5px;
+}
+
+/* .tableIcon{
+  color:#02000e;
+  border: 1px solid #cecece;
+  border-radius: 50%;
+}
+
+.tableIcon:hover{
+  color: #0771DE;
+  border: 1px solid #0771DE;
+
+} */
 
 th {
     font-size: 11px;
@@ -18,8 +66,6 @@ th , td {
 td {
     height: 44px;
 }
-
-
 
 :host ::ng-deep {
     pagination-controls {
