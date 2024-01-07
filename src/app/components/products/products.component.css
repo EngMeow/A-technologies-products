@@ -4,7 +4,6 @@ th {
     color: #85848B;
     background-color: #F8F8F9;
     font-weight: 400;
-    margin: 10px;
 }
 
 tr { 
@@ -18,4 +17,83 @@ th , td {
 
 td {
     height: 44px;
+}
+
+
+
+:host ::ng-deep {
+    pagination-controls {
+      .ngx-pagination {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+      }
+  
+      .ngx-pagination li {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #f8f8f8;
+        color: #0b3049;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+  
+      .ngx-pagination .small-screen {
+        display: none !important;
+      }
+
+      .ngx-pagination li.pagination-previous,
+      .ngx-pagination li.pagination-next {
+        a, span {
+          width: 100%;
+          height: 100%;
+          border-radius: 25px;
+          overflow: hidden;
+          color: #f8f8f8;
+        }
+      }
+
+    .ngx-pagination .pagination-previous a:before,
+    .ngx-pagination .pagination-previous.disabled:before a:before,
+    .ngx-pagination li.pagination-next::before{
+        margin-right: 0px !important;
+        font-size: 10px;
+        margin-top: -5px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        /* border: 1px solid rgb(63, 130, 255); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #2199e8;
+        left:0;
+        pointer-events: none;
+    }
+
+    .ngx-pagination .pagination-next::before{
+        content: '\bb';
+    }
+    .ngx-pagination .pagination-next::after{
+        display: none !important;
+    }
+
+    .ngx-pagination .pagination-previous.disabled::before,
+    .ngx-pagination .pagination-next.disabled::before{
+        opacity: 0.4;
+    }
+    .ngx-pagination .pagination-previous.disabled::hover{
+        background-color: #e24a4a;
+    }
+
+    .ngx-pagination a:hover , .ngx-pagination button:hover {
+        background: initial !important;
+    }
+
+  }
 }

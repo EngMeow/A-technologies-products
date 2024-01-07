@@ -8,6 +8,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { InfoComponent } from './components/info/info.component';
 import { NgApexchartsModule } from "ng-apexcharts";
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
+import {NgxPaginationModule} from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { PieChartComponent } from './components/pie-chart/pie-chart.component';
     BrowserModule,
     AppRoutingModule,
     NgApexchartsModule, 
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -36,4 +36,8 @@ export class ProductsComponent {
         return 'transparent'; // Set a default color if needed
     }
    }
+
+   itemsPerPage:number = 5 ;
+   p: number = 1;
+   totalProduct:any 
 }
