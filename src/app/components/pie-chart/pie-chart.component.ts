@@ -84,7 +84,7 @@ export class PieChartComponent {
             name: {
               offsetY: 12,
               show: true,
-              color: "#83899F",
+              color: "#000",
               fontSize: "8px",
               fontFamily:'ArabicFont'
             },
@@ -97,7 +97,7 @@ export class PieChartComponent {
           shade: "light",
           type: "horizontal",
           shadeIntensity: 0.9,
-          gradientToColors: ["#64B0FF"],
+          gradientToColors: ["#0771DE"],
           inverseColors: true,
           opacityFrom: 1,
           opacityTo: 1,
