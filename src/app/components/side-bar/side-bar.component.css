@@ -1,0 +1,14 @@
+.sidebar{
+    background-color: #0771DE;
+}
+
+#accordionSidebar{
+    font-size: 11px;
+}
+
+img:hover{
+    background-color: #ffffffa8;
+    background-opacity: 25% ;
+    color:#0771DE
+}
+

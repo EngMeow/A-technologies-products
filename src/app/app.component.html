@@ -1,15 +1,25 @@
-<div class="bg-primary bg-opacity-25" style="height: 60px;"></div>
 <div class="d-flex">
-    <div class="bg-primary bg-opacity-25" style="width: 90px;">
-    </div>
-    <div class="d-flex justify-content-around p-3">
-        <div class="bg-primary bg-opacity-50 rounded-3 ms-3" style="width: 223px;"></div>
-        <div class="m-auto">
-                <app-hero></app-hero>
-                <app-info></app-info>
-                <app-products></app-products>
+    <app-side-bar></app-side-bar>
+    <div>
+        <div style="height: 60px;">
+        <app-nav-bar></app-nav-bar>
+        </div>
+        <div class="d-flex">
+            
+            <div class="d-flex justify-content-around p-3">
+                <div class=" rounded-3 ms-3" style="width: 223px;">
+                    <app-sub-side-bar></app-sub-side-bar>
+                </div>
+                <div class="m-auto">
+                        <app-hero></app-hero>
+                        <app-info></app-info>
+                        <app-products></app-products>
+                </div>
+            </div>
         </div>
     </div>
+
 </div>
+
 
 <!-- <app-area-chart></app-area-chart> -->

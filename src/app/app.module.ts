@@ -10,6 +10,9 @@ import { NgApexchartsModule } from "ng-apexcharts";
 import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { AreaChartComponent } from './components/area-chart/area-chart.component';
+import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { SubSideBarComponent } from './components/sub-side-bar/sub-side-bar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { AreaChartComponent } from './components/area-chart/area-chart.component
     ProductsComponent,
     InfoComponent,
     PieChartComponent,
-    AreaChartComponent
+    AreaChartComponent,
+    SideBarComponent,
+    NavBarComponent,
+    SubSideBarComponent
   ],
   imports: [
     BrowserModule,
