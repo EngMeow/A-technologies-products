@@ -69,7 +69,9 @@ td {
 
 .my-pagination ::ng-deep {
   .ngx-pagination .current {
-    background: #0773de6e;
+    background: #0773de;
+    color: white;
+    
   }
   .ngx-pagination {
     display: flex;
@@ -132,7 +134,7 @@ td {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #2199e8;
+        color: #0771DE;
         left:0;
         pointer-events: none;
     }
@@ -149,7 +151,7 @@ td {
         opacity: 0.4;
     }
     .ngx-pagination .pagination-previous.disabled::hover{
-        background-color: #2199e8
+        background-color: #0773de
     }
     .ngx-pagination .pagination-previous a:before,
     .ngx-pagination .pagination-previous.disabled:before a:before,
@@ -165,7 +167,7 @@ td {
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #2199e8;
+        color: #0771DE;
         left:0;
         pointer-events: none;
     }
@@ -182,7 +184,7 @@ td {
         opacity: 0.4;
     }
     .ngx-pagination .pagination-previous.disabled::hover{
-        background-color: #2199e8;
+        background-color: #0771DE;
     }
 
     .ngx-pagination a:hover , .ngx-pagination button:hover {
