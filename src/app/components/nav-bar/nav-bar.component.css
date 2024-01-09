@@ -9,3 +9,22 @@ i:hover{
     border:1px solid #0771DE ;
 
 }
+
+.notification-dot {
+    position: absolute;
+    top: -7px;
+    right: 0;
+    width: 7px;
+    height: 7px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.notification-icon {
+    position: relative;
+    display: inline-block;
+}
